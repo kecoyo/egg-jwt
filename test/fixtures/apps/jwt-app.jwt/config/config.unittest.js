@@ -1,3 +1,3 @@
 'use strict';
 
-exports.keys = 'egg-jwt';
+exports.keys = '@kecoyo/egg-jwt';

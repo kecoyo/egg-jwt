@@ -1,3 +1,3 @@
 exports.middleware = [ 'jwtErrorHandler' ];
 
-exports.keys = 'egg-jwt';
+exports.keys = '@kecoyo/egg-jwt';

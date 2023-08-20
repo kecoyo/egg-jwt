@@ -1,24 +1,47 @@
 {
-  "name": "egg-jwt",
-  "version": "3.1.7",
+  "name": "@kecoyo/egg-jwt",
+  "version": "1.0.0",
   "description": "JWT authentication plugin for egg",
-  "eggPlugin": {
-    "name": "jwt",
-    "optionalDependencies": [
-      "onerror"
-    ]
-  },
   "keywords": [
     "egg",
     "eggPlugin",
     "egg-plugin",
     "jwt"
   ],
+  "homepage": "https://github.com/kecoyo/egg-jwt#readme",
+  "bugs": {
+    "url": "https://github.com/kecoyo/egg-jwt/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kecoyo/egg-jwt.git"
+  },
+  "license": "MIT",
+  "author": "kecoyo <kecoyo@163.com>",
+  "files": [
+    "index.js",
+    "app.js",
+    "agent.js",
+    "index.d.ts",
+    "config",
+    "app",
+    "lib"
+  ],
+  "scripts": {
+    "autod": "autod",
+    "ci": "npm run lint && npm run cov",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test"
+  },
+  "prettier": "@kecoyo/prettier-config",
   "dependencies": {
     "jsonwebtoken": "^8.3.0",
     "koa-jwt2": "^1.0.3"
   },
   "devDependencies": {
+    "@kecoyo/prettier-config": "^1.0.2",
     "autod": "^3.0.1",
     "egg": "^2.10.0",
     "egg-bin": "^4.8.1",
@@ -31,34 +54,13 @@
   "engines": {
     "node": ">=6.0.0"
   },
-  "scripts": {
-    "test": "npm run lint -- --fix && npm run test-local",
-    "test-local": "egg-bin test",
-    "cov": "egg-bin cov",
-    "lint": "eslint .",
-    "ci": "npm run lint && npm run cov",
-    "autod": "autod"
-  },
-  "files": [
-    "index.js",
-    "app.js",
-    "agent.js",
-    "index.d.ts",
-    "config",
-    "app",
-    "lib"
-  ],
   "ci": {
     "version": "8, 10, 12"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/okoala/egg-jwt.git"
-  },
-  "bugs": {
-    "url": "https://github.com/okoala/egg-jwt/issues"
-  },
-  "homepage": "https://github.com/okoala/egg-jwt#readme",
-  "author": "okoala <dapixp@gmail.com>",
-  "license": "MIT"
+  "eggPlugin": {
+    "name": "jwt",
+    "optionalDependencies": [
+      "onerror"
+    ]
+  }
 }
